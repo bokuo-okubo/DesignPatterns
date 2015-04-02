@@ -1,3 +1,4 @@
+import com.bko.adapter.AdapterMain;
 import com.bko.iterator.IteratorMain;
 
 import java.util.HashMap;
@@ -11,7 +12,8 @@ public class Starter {
     private static final Map<String,Integer> PROJECT_MAP;
     static {
         HashMap<String, Integer> map = new HashMap<String, Integer>();
-        map.put( "iterator",new Integer(1) );
+        map.put("iterator",new Integer(1));
+        map.put("adapter", new Integer(2));
 
         PROJECT_MAP = Collections.unmodifiableMap(map);
     }
@@ -33,6 +35,9 @@ public class Starter {
                 break;
             case 1:
                 IteratorMain.main();
+                break;
+            case 2:
+                AdapterMain.main();
                 break;
         }
     }

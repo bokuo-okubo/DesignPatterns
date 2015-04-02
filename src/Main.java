@@ -2,8 +2,8 @@ import java.io.*;
 
 public class Main{
     public static void main(String args[]) throws IOException {
-        String name = IOHandler.selectProject();
-        Starter.startProject(name);
+        String execute = "iterator";
+        Starter.startProject(execute);
     }
 }
 
