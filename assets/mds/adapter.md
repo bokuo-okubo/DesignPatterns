@@ -80,7 +80,30 @@ Teacherクラスのmainメソッドの中身を変更することは問題ない
 太郎がどうしてもChairpersonインターフェイスを実装したくないと言いはった場合のことを考える。
 hanakoにchairpersonインタフェイスを実装してもらう。
 
+```
+package com.bko.adapter;
 
+/**
+ * Created by yo on 4/3/15.
+ */
+public class Hanako implements Chairperson {
+    private Taro taro;
+
+    public Hanako() {
+        this.taro = new Taro();
+    }
+
+    @Override
+    public void organaizeClass() {
+        this.taro.enjoyWithClassmate();
+    }
+}
+
+```
+
+
+###2.4 Adapterパターンまとめ
+Adapterパターンは、利用したいインタフェイスを強制的に変えたいような場合に利用するとよい。
 
 
 
