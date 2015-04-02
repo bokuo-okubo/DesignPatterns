@@ -154,6 +154,7 @@ public abstract class Teacher{
 
 
 class Main
+
 ```
 public class Main{
 	public static void main(String args[]){
@@ -166,7 +167,138 @@ public class Main{
 
 ```
 
+###実装
 
+```
+
+package com.bko.iterator.study1;
+
+import com.bko.iterator.samples.Teacher;
+import com.bko.iterator.samples.StudentList;
+import com.bko.iterator.samples.Student;
+
+/*
+spec
+student names
+赤井亮太　男
+赤羽里美　女
+岡田美央　女
+西森俊介　男
+中ノ森玲菜　女
+
+ */
+public class MyTeacher extends Teacher{
+    protected StudentList studentList;
+
+    @Override
+    public void createStudentList() {
+        String[] studentsNameList = {
+                "赤井亮太",
+                "赤羽里美",
+                "岡田美央",
+                "西森俊介",
+                "中ノ森玲菜"
+        };
+
+        int[] studentSexList = { 1, 2, 3, 1, 2 };
+
+        if(studentList == null) {
+            studentList = new StudentList(studentsNameList.length);
+        }
+
+        for(int i = 0; i < studentsNameList.length; i++) {
+            Student student = new Student( studentsNameList[i], studentSexList[i] );
+            studentList.add( student );
+        }
+
+    }
+
+    @Override
+    public void callStudents() {
+        for(int i = 0; i < studentList.getLastNum(); i++ ){
+            System.out.println( studentList.getStudentAt(i).getName() );
+        }
+    }
+}
+
+```
+
+- ここからがIteratorパターンの本筋。
+
+	学校から、「名簿が古く鳴ったので、新しい形式のものに変えようと思う。新しい名簿は、java.util.Vectorクラスを利用したものです。」との通達があり、新しい名簿が渡されたとする。
+	
+
+
+```
+import java.util.Vector;
+ 
+public class NewStudentList{
+    protected Vector<Student> students;
+    public void add(Student student){
+        students.add(student);
+    }
+    public Student getStudentAd(int index){
+        return students.get(index);
+    }
+}
+
+
+```
+
+
+**Iteratorパターン**
+
+![iterator4.gif](../img/iterator/iterator4.gif)
+
+
+
+	Iteratorパターンでは、何らかの集約体が必ずAggregateインターフェイスを実装するようにしている。	
+	Aggregate とは、集約の意味で
+	Aggregate インタフェイスでは、Iteratorインタフェイスの実装クラスを返す、Iterator()というメソッドを定義しているだけ。
+	Iteratorインタフェイスでは、集約体を操作するために必要なメソッドとして、
+	この集約体に次の要素が存在するかしないかをboolean型で返す hasNext() メソッドと、
+	次の要素を返すnext()メソッドを定義する。
+	next()メソッドの帰り値は、Object型とする。
+	この２つのインタフェイスのコードはこんな感じ
+	
+
+interface Aggregate
+
+```
+public interface Aggregate{
+	public Iterator iterator();
+}
+
+```
+
+interface Iterator
+
+```
+public interface Iterator{
+	public boolean hasNext();
+	public Object next();
+}
+```
+
+より具体的に、
+今回のケースだと
+- 具体的な集約体を表すクラスはどのクラスになるか
+	- StudentList
+	- これを拡張したクラスとして、MyStudent クラスを作成する
+	こいつが、*Aggregate*インターフェイスを実装する必要がある
+	
+	
+```
+public class MyStudentList extends StudentList implements Aggregate{
+    public Iterator iterator(){
+        return ・・・; //Iteratorオブジェクトを返す。
+        }
+}
+
+```
+
+
+![iterator2.gif](../img/iterator/iterator2.gif)
 
 
 
