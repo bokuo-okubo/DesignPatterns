@@ -2,7 +2,7 @@ import java.io.*;
 
 public class Main{
     public static void main(String args[]) throws IOException {
-        String execute = "iterator";
+        String execute = "adapter";
         Starter.startProject(execute);
     }
 }

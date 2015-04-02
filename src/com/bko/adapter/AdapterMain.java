@@ -5,6 +5,6 @@ package com.bko.adapter;
  */
 public class AdapterMain {
     public static void main(){
-
+        Teacher.main();
     }
 }

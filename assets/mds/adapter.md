@@ -48,4 +48,46 @@ public class Teacher{
 ![adapter1.gif](../img/adapter/adapter1.gif)
 
 
+![adapter2.gif](../img/adapter/adapter2.gif)
+
+
+###実習課題１
+TaroクラスとChairpersonインタフェイスのインタフェイスの違いを埋めるようにNewTaroクラスを実装せよ。
+Teacherクラスのmainメソッドの中身を変更することは問題ない。
+
+- 継承をもちいたAdapterパターンの一般的なクラス図
+
+![adapter3.gif](../img/adapter/adapter3.gif)  
+
+
+##2.3 サンプルケース２(移譲を利用したAdapterパターン)
+
+- 何らかの慰留で継承を利用したAdapterパターンが利用できないことも考えられる
+	- 例えば、Targetがインターフェイスではなく、抽象クラスとして宣言されている場合。
+		- この場合、Adapterクラスは、Targetクラスをimplementsすることができないため、extendsする必要が出てくる。
+		- Target抽象クラスとAdapteeクラスの両方を継承する必要が出てきてしまう。
+			- これは、多重継承を禁じているJavaの場合、くそ引っかかるよね
+
+このような場合は、以上を利用したAdapterパターンを利用してみる。
+
+- 移譲を利用するAdapterパターンのクラス図			
+
+![adapter4.gif](../img/adapter/adapter4.gif)
+
+
+###実習課題２
+
+太郎がどうしてもChairpersonインターフェイスを実装したくないと言いはった場合のことを考える。
+hanakoにchairpersonインタフェイスを実装してもらう。
+
+
+
+
+
+
+
+
+
+
+
 
