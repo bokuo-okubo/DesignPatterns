@@ -11,4 +11,5 @@
 
 
 ###目録
-1.[Itaratorパターン](./assets/mds/iterator.md)
+1. [Itaratorパターン](./assets/mds/iterator.md)
+2. [Adapterパターン](./assets/mds/adapter.md)
