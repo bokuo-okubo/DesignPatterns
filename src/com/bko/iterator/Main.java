@@ -1,7 +1,7 @@
-package com.bko;
+package com.bko.iterator;
 
-import com.bko.samples.*;
-import com.bko.study1.MyTeacher;
+import com.bko.iterator.samples.*;
+import com.bko.iterator.study1.MyTeacher;
 
 public class Main{
     public static void main(String args[]){

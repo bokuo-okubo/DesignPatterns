@@ -1,10 +1,10 @@
-package com.bko.samples;
+package com.bko.iterator.samples;
 
 public class StudentList{
     protected Student[] students;
     private int last = 0;
 
-    public StudentList(){}; //コンストラクタ
+    public StudentList(){} //コンストラクタ
     public StudentList(int studentCount){ //オーバーロード
         this.students = new Student[studentCount];
     }

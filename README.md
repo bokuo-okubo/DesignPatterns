@@ -11,4 +11,4 @@
 
 
 ###目録
-1.[Itaratorパターン](./day1_iterator/iterator.md)
+1.[Itaratorパターン](./assets/mds/iterator.md)

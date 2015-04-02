@@ -1,8 +1,8 @@
-package com.bko.study1;
+package com.bko.iterator.study1;
 
-import com.bko.samples.Teacher;
-import com.bko.samples.StudentList;
-import com.bko.samples.Student;
+import com.bko.iterator.samples.Teacher;
+import com.bko.iterator.samples.StudentList;
+import com.bko.iterator.samples.Student;
 
 /*
 spec
