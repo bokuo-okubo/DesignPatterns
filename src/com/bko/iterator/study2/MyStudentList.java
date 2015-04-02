@@ -1,6 +1,6 @@
-package com.bko.iterator.study2;
+package com.bko.Iterator.study2;
 
-import com.bko.iterator.samples.StudentList;
+import com.bko.Iterator.samples.StudentList;
 
 /**
  * Created by bko on 4/2/15.

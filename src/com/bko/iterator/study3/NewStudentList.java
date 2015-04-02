@@ -1,11 +1,11 @@
-package com.bko.iterator.study3;
+package com.bko.Iterator.study3;
 
 /**
  * Created by yo on 4/2/15.
  */
 import java.util.Vector;
 
-import com.bko.iterator.samples.Student;
+import com.bko.Iterator.samples.Student;
 
 public class NewStudentList {
     protected Vector<Student> students = new Vector<Student>();

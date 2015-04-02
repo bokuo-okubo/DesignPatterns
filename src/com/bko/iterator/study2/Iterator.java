@@ -1,6 +1,4 @@
-package com.bko.iterator.study2;
-
-import java.util.Objects;
+package com.bko.Iterator.study2;
 
 /**
  * Created by yo on 4/2/15.

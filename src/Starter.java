@@ -1,5 +1,6 @@
-import com.bko.adapter.AdapterMain;
-import com.bko.iterator.IteratorMain;
+import com.bko.Adapter.AdapterMain;
+import com.bko.Iterator.IteratorMain;
+import com.bko.TemplateMethod.TemplateMethodMain;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,6 +15,7 @@ public class Starter {
         HashMap<String, Integer> map = new HashMap<String, Integer>();
         map.put("iterator",new Integer(1));
         map.put("adapter", new Integer(2));
+        map.put("template", new Integer(3));
 
         PROJECT_MAP = Collections.unmodifiableMap(map);
     }
@@ -39,6 +41,10 @@ public class Starter {
             case 2:
                 AdapterMain.main();
                 break;
+            case 3:
+                TemplateMethodMain.main();
+                break;
+
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.bko.iterator.samples;
+package com.bko.Iterator.samples;
 
 public class Student{
     private String name;

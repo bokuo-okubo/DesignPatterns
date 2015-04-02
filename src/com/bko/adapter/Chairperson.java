@@ -1,4 +1,4 @@
-package com.bko.adapter;
+package com.bko.Adapter;
 
 /**
  * Created by yo on 4/3/15.

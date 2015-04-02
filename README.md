@@ -13,3 +13,4 @@
 ###目録
 1. [Itaratorパターン](./assets/mds/iterator.md)
 2. [Adapterパターン](./assets/mds/adapter.md)
+3. [TemplateMethodパターン](./assets/mds/TemplateMethod.md)

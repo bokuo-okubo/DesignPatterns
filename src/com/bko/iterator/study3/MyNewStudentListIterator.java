@@ -1,7 +1,7 @@
-package com.bko.iterator.study3;
+package com.bko.Iterator.study3;
 
-import com.bko.iterator.samples.Student;
-import com.bko.iterator.study2.Iterator;
+import com.bko.Iterator.samples.Student;
+import com.bko.Iterator.study2.Iterator;
 
 /**
  * Created by yo on 4/2/15.
