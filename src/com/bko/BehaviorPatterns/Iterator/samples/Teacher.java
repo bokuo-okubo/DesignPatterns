@@ -1,4 +1,4 @@
-package com.bko.Iterator.samples;
+package com.bko.BehaviorPatterns.Iterator.samples;
 
 public abstract class Teacher{
     protected StudentList studentList;

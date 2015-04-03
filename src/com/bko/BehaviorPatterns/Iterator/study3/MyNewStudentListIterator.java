@@ -1,7 +1,7 @@
-package com.bko.Iterator.study3;
+package com.bko.BehaviorPatterns.Iterator.study3;
 
-import com.bko.Iterator.samples.Student;
-import com.bko.Iterator.study2.Iterator;
+import com.bko.BehaviorPatterns.Iterator.samples.Student;
+import com.bko.BehaviorPatterns.Iterator.study2.Iterator;
 
 /**
  * Created by yo on 4/2/15.

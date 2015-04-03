@@ -1,8 +1,10 @@
+import com.bko.Starter;
+
 import java.io.*;
 
 public class Main{
     public static void main(String args[]) throws IOException {
-        String execute = "factory";
+        String execute = "singleton";
         Starter.startProject(execute);
     }
 }
