@@ -1,4 +1,4 @@
-package com.bko.BehaviorPatterns.Iterator.samples;
+package com.bko.Iterator.samples;
 
 public class StudentList{
     protected Student[] students;

@@ -1,4 +1,4 @@
-package com.bko.BehaviorPatterns.Iterator.samples;
+package com.bko.Iterator.samples;
 
 /**
  * Created by yo on 4/2/15.

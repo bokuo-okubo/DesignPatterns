@@ -1,8 +1,8 @@
-package com.bko.BehaviorPatterns.Iterator;
+package com.bko.Iterator;
 
-import com.bko.BehaviorPatterns.Iterator.samples.Teacher;
-import com.bko.BehaviorPatterns.Iterator.study1.MyTeacher;
-import com.bko.BehaviorPatterns.Iterator.study3.VeteranTeacher;
+import com.bko.Iterator.samples.Teacher;
+import com.bko.Iterator.study1.MyTeacher;
+import com.bko.Iterator.study3.VeteranTeacher;
 
 /**
  * Created by yo on 4/2/15.

@@ -1,6 +1,6 @@
-package com.bko.BehaviorPatterns.Iterator.study2;
+package com.bko.Iterator.study2;
 
-import com.bko.BehaviorPatterns.Iterator.samples.StudentList;
+import com.bko.Iterator.samples.StudentList;
 
 /**
  * Created by bko on 4/2/15.

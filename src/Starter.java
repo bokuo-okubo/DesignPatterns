@@ -1,9 +1,6 @@
-package com.bko;
-
 import com.bko.Adapter.AdapterMain;
 import com.bko.FactoryMethod.FactoryMethodMain;
-import com.bko.BehaviorPatterns.Iterator.IteratorMain;
-import com.bko.GeneratePatterns.Singleton.SingletonMain;
+import com.bko.Iterator.IteratorMain;
 import com.bko.TemplateMethod.TemplateMethodMain;
 
 import java.util.HashMap;
@@ -21,7 +18,6 @@ public class Starter {
         map.put("adapter", new Integer(2));
         map.put("template", new Integer(3));
         map.put("factory", new Integer(4));
-        map.put("singleton", new Integer(5));
 
         PROJECT_MAP = Collections.unmodifiableMap(map);
     }
@@ -53,9 +49,7 @@ public class Starter {
             case 4:
                 FactoryMethodMain.main();
                 break;
-            case 5:
-                SingletonMain.main();
-                break;
+
         }
     }
 }
