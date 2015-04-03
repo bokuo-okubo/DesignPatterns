@@ -5,6 +5,6 @@ package com.bko.TemplateMethod;
  */
 public class TemplateMethodMain {
     public static void main(){
-        
+
     }
 }

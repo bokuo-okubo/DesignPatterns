@@ -11,6 +11,6 @@
 
 
 ###目録
-1. [Itaratorパターン](./assets/mds/iterator.md)
-2. [Adapterパターン](./assets/mds/adapter.md)
+1. [Itaratorパターン](./assets/mds/Iterator.md)
+2. [Adapterパターン](./assets/mds/Adapter.md)
 3. [TemplateMethodパターン](./assets/mds/TemplateMethod.md)
