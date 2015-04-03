@@ -248,7 +248,7 @@ public class NewStudentList{
 
 **Iteratorパターン**
 
-![iterator4.gif](../img/iterator/iterator4.gif)
+![iterator4.gif](../img/Iterator/iterator4.gif)
 
 
 
@@ -298,7 +298,7 @@ public class MyStudentList extends StudentList implements Aggregate{
 ```
 
 
-![iterator2.gif](../img/iterator/iterator2.gif)
+![iterator2.gif](../img/Iterator/iterator2.gif)
 
 
 

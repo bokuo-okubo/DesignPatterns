@@ -55,7 +55,7 @@ public class RegisterNote{
 ###クラス図
 
 
-	
+![singleton2](../img/Singleton/singleton2.gif)
 
 
 

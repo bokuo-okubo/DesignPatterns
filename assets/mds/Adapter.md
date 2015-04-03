@@ -45,10 +45,10 @@ public class Teacher{
 }
 ```
 
-![adapter1.gif](../img/adapter/adapter1.gif)
+![adapter1.gif](../img/Adapter/adapter1.gif)
 
 
-![adapter2.gif](../img/adapter/adapter2.gif)
+![adapter2.gif](../img/Adapter/adapter2.gif)
 
 
 ###実習課題１
@@ -57,7 +57,7 @@ Teacherクラスのmainメソッドの中身を変更することは問題ない
 
 - 継承をもちいたAdapterパターンの一般的なクラス図
 
-![adapter3.gif](../img/adapter/adapter3.gif)  
+![adapter3.gif](../img/Adapter/adapter3.gif)  
 
 
 ##2.3 サンプルケース２(移譲を利用したAdapterパターン)
@@ -72,7 +72,7 @@ Teacherクラスのmainメソッドの中身を変更することは問題ない
 
 - 移譲を利用するAdapterパターンのクラス図			
 
-![adapter4.gif](../img/adapter/adapter4.gif)
+![adapter4.gif](../img/Adapter/adapter4.gif)
 
 
 ###実習課題２
