@@ -22,7 +22,8 @@
 	- 実際に生成されるインスタンスに依存しない、インスタンスの生成方法を提供する
 
 4. [Prototype]
-5. [Singleton]
+5. [Singleton](./assets/mds/Singleton.md)
+	- あるクラスについて、そのインスタンスが単一であることを保証する
 
 ####構造に関するパターン
 6. [Adapter](./assets/mds/Adapter.md)
