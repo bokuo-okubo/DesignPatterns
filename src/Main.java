@@ -2,7 +2,7 @@ import java.io.*;
 
 public class Main{
     public static void main(String args[]) throws IOException {
-        String execute = "template";
+        String execute = "factory";
         Starter.startProject(execute);
     }
 }

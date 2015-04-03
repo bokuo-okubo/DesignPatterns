@@ -1,4 +1,5 @@
 import com.bko.Adapter.AdapterMain;
+import com.bko.FactoryMethod.FactoryMethodMain;
 import com.bko.Iterator.IteratorMain;
 import com.bko.TemplateMethod.TemplateMethodMain;
 
@@ -16,6 +17,7 @@ public class Starter {
         map.put("iterator",new Integer(1));
         map.put("adapter", new Integer(2));
         map.put("template", new Integer(3));
+        map.put("factory", new Integer(4));
 
         PROJECT_MAP = Collections.unmodifiableMap(map);
     }
@@ -43,6 +45,9 @@ public class Starter {
                 break;
             case 3:
                 TemplateMethodMain.main();
+                break;
+            case 4:
+                FactoryMethodMain.main();
                 break;
 
         }
