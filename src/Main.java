@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Main{
     public static void main(String args[]) throws IOException {
-        String execute = "singleton";
+        String execute = "prototype";
         Starter.startProject(execute);
     }
 }
