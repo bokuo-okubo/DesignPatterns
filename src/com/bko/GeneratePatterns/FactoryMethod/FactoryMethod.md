@@ -110,7 +110,7 @@ public class ImagawasCutPrint extends CutPrint{
 
 *クラス図	*
 
-![factory2.gif](../img/FactoryMethod/factory2.gif)
+![factory2.gif](img/factory2.gif)
 
 
 
