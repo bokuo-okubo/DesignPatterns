@@ -3,12 +3,11 @@ package com.bko.Iterator;
 import com.bko.Iterator.samples.Teacher;
 import com.bko.Iterator.study1.MyTeacher;
 import com.bko.Iterator.study3.VeteranTeacher;
-import com.bko.abstracts.ProjectMainTemplate;
 
 /**
  * Created by yo on 4/2/15.
  */
-public class IteratorMain extends ProjectMainTemplate {
+public class IteratorMain {
     public static void main(){
 
         System.out.println("MyTeacher---\n");
