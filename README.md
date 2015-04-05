@@ -21,7 +21,8 @@
 3. [FactoryMethod](./assets/mds/FactoryMethod.md)
 	- 実際に生成されるインスタンスに依存しない、インスタンスの生成方法を提供する
 
-4. [Prototype]
+4. [Prototype](./assets/mds/prototype.md)
+	- 同様のインスタンスを生成するために、原型のインスタンスを複製する
 5. [Singleton](./assets/mds/Singleton.md)
 	- あるクラスについて、そのインスタンスが単一であることを保証する
 
