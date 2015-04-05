@@ -16,7 +16,8 @@
 ####生成に関するパターン
 1. [AbstractFactory]
 
-2. [Builder]
+2. [Builder](./assets/mds/builder.md)
+	- 複合化されたインスタンスの生成過程を隠蔽する。
 
 3. [FactoryMethod](./assets/mds/FactoryMethod.md)
 	- 実際に生成されるインスタンスに依存しない、インスタンスの生成方法を提供する
