@@ -67,13 +67,67 @@ drawCrystalという時間のかかるメソッドと、cutAccordanceWithLineと
 interface Cloneable
 
 ```
+package com.bko.generate_patterns.proto_type;
+
+/**
+ * Created by bko on 4/5/15.
+ */
+public interface Cloneable {
+    public Cloneable createClone();
+}
 
 ```
 
 class Paper implements Cloneable
 
 ```
+package com.bko.generate_patterns.proto_type;
+
+/**
+ * Created by bko on 4/5/15.
+ */
+public class Paper implements Cloneable {
+    private String name;
+    public Paper(){}
+
+    public Paper(String name){
+        this.name = name;
+    }
+
+    public void printName(){
+        System.out.println(this.name);
+    }
+
+    @Override
+    public Cloneable createClone() {
+        Paper newPaper = new Paper();
+        newPaper.name = this.name;
+
+        return newPaper;
+    }
+}
+
+
 ```
+
+時間のかかる作業は、prototypeを作成する一度だけとなり、時間が節約される。
+
+クラス図
+
+![prototype1.png](../img/prototype/prototype1.png)
+
+
+- prototypeパターンは、複製を作成するためのメソッドを用意する、という至って単純なものと考えてよいだろう。
+
+- この特徴をうまく利用すれば、大きなメリットを得ることができる。
+
+例えば、以下の
+ようなPrototypeKeeperクラスというものを作成する例をあげてみる。
+
+```
+
+```
+
 
 
 
