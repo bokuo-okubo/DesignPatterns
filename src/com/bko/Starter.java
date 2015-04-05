@@ -4,6 +4,7 @@ package com.bko;
 
 import com.bko.behavior_patterns.iterator.IteratorMain;
 import com.bko.behavior_patterns.template_method.TemplateMethodMain;
+import com.bko.generate_patterns.builder.BuilderMain;
 import com.bko.generate_patterns.factory_method.FactoryMethodMain;
 import com.bko.generate_patterns.proto_type.ProtoTypeMain;
 import com.bko.generate_patterns.singleton.SingletonMain;
@@ -20,12 +21,13 @@ public class Starter {
     private static final Map<String,Integer> PROJECT_MAP;
     static {
         HashMap<String, Integer> map = new HashMap<String, Integer>();
-        map.put("iterator",new Integer(1));
-        map.put("adapter", new Integer(2));
-        map.put("template", new Integer(3));
-        map.put("factory", new Integer(4));
-        map.put("singleton", new Integer(5));
-        map.put("prototype", new Integer(6));
+        map.put("iterator",new Integer(1) );
+        map.put("adapter", new Integer(2) );
+        map.put("template", new Integer(3) );
+        map.put("factory", new Integer(4) );
+        map.put("singleton", new Integer(5) );
+        map.put("prototype", new Integer(6) );
+        map.put("builder", new Integer(7) );
 
         PROJECT_MAP = Collections.unmodifiableMap(map);
     }
@@ -62,6 +64,9 @@ public class Starter {
                 break;
             case 6:
                 ProtoTypeMain.main();
+                break;
+            case 7:
+                BuilderMain.main();
                 break;
         }
     }
