@@ -35,7 +35,6 @@ public class FileHandler {
                     int num = Integer.parseInt(st.nextToken());
                     row.add(num);
                 }
-                System.out.println();
                 ary.add(row);
             }
             br.close();

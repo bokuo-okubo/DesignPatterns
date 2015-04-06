@@ -86,6 +86,59 @@ sortの実装を与えられないから。
 - 実装用のクラス階層とは、ここではsortメソッドの実装を与えるクラス階層として、SortImpleクラスを親とするクラス階層をかんがえる。
 - 具体的には、Sorterクラス、SortImpleクラスを以下のようなコーディングにしておく。
 
+public class Sorter
+```
+package com.bko.structure_patterns.bridge.sorters;
+
+
+/**
+ * Created by bko on 4/6/15.
+ */
+public abstract class Sorter {
+    private SortImple sortImple;
+    public Sorter(SortImple sortImple){
+        this.sortImple = sortImple;
+    }
+}
+```
+
+sortImple
+```
+package com.bko.structure_patterns.bridge.sorters;
+
+import java.util.Objects;
+
+/**
+ * Created by bko on 4/6/15.
+ */
+public abstract class SortImple {
+    public abstract void sort(Object obj[]);
+}
+```
+
+そして実際にソートの機能を実装するQuickSorter,BubbleSorterをSortImpleのextendとして実装する。
+
+この状態でのクラス図
+![class zu](../img/bridge/bridge5.gif)
+
+- このような設計にしておくと、機能を追加するために、Sorterクラスを拡張して作成した新しいクラスでも、すでに存在する実装部分を利用することができるようになる。
+- 例えば、Sorterクラスを拡張するTimerSorterクラスを作成する場合には、以下のようなコーディングになる。
+
+
+```
+ublic class TimerSorter extends Sorter{
+    public TimerSorter(SortImple sortImple){
+        super(sortImple);
+    }
+    public void timerSort(Object obj[]){
+        long start = System.currentTimeMillis();
+        sort(obj);
+        long end = System.currentTimeMillis();
+        System.out.println("time:"+(end - start));
+    }
+}
+```
+
 
 
 

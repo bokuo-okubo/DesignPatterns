@@ -2,8 +2,10 @@ package com.bko.structure_patterns.bridge;
 
 import com.bko.structure_patterns.bridge.sorters.BubbleSorter;
 import com.bko.structure_patterns.bridge.sorters.QuickSorter;
+import com.bko.structure_patterns.bridge.sorters.SortImple;
 import com.bko.structure_patterns.bridge.sorters.Sorter;
 import com.bko.structure_patterns.bridge.sorters.data.SortData;
+import com.bko.structure_patterns.bridge.sorters.timer_sorter.TimerSorter;
 
 import java.util.List;
 
@@ -13,12 +15,38 @@ import java.util.List;
 public class BridgeMain {
     public static void main(){
 //        bubbleSorting();
-        quickSorting();
+//        quickSorting();
+        useBubbleTimer();
+        useQuickTimer();
+    }
+
+    private static void useBubbleTimer(){
+        List data = SortData.getDataArray();
+        TimerSorter timerbubble = new TimerSorter( new BubbleSorter() );
+
+        Object[] ary= new Object[data.size()];
+
+        for(int n=0; n < data.size(); n++){
+            ary[n] = ((List) data.get(n)).get(1);
+        }
+        timerbubble.timerSorter(ary);
+    }
+
+    private static void useQuickTimer(){
+        List data = SortData.getDataArray();
+        TimerSorter timerquick = new TimerSorter( new QuickSorter() );
+
+        Object[] ary= new Object[data.size()];
+
+        for(int n=0; n < data.size(); n++){
+            ary[n] = ((List) data.get(n)).get(1);
+        }
+        timerquick.timerSorter(ary);
     }
 
     private static void bubbleSorting(){
         List data = SortData.getDataArray();
-        Sorter bubble = new BubbleSorter();
+        SortImple bubble = new BubbleSorter();
         Object[] ary= new Object[data.size()];
 
         for(int n=0; n < data.size(); n++){
@@ -29,7 +57,7 @@ public class BridgeMain {
 
     private static void quickSorting(){
         List data = SortData.getDataArray();
-        Sorter quick = new QuickSorter();
+        SortImple quick = new QuickSorter();
         Object[] ary= new Object[data.size()];
         for(int n=0; n < data.size(); n++){
             ary[n] = ((List) data.get(n)).get(1);

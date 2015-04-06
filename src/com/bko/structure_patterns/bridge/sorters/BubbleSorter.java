@@ -3,7 +3,7 @@ package com.bko.structure_patterns.bridge.sorters;
 /**
  * Created by bko on 4/6/15.
  */
-public class BubbleSorter extends Sorter {
+public class BubbleSorter extends SortImple {
     @Override
     public void sort(Object[] obj) {
         int[] ints = new int[obj.length];
@@ -12,9 +12,10 @@ public class BubbleSorter extends Sorter {
         }
         int[] answer = bubbleSort(ints);
         for(int i=0; i < answer.length; i++){
-            System.out.println(answer[i]);
+//            System.out.println(answer[i]);
         }
     }
+
 
     protected int[] bubbleSort(int[] ary){
         //最期の要素を覗いて、全ての要素を並べ変える

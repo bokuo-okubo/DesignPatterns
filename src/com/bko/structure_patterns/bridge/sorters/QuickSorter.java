@@ -3,7 +3,7 @@ package com.bko.structure_patterns.bridge.sorters;
 /**
  * Created by bko on 4/6/15.
  */
-public class QuickSorter extends Sorter {
+public class QuickSorter extends SortImple {
     @Override
     public void sort(Object[] obj) {
         int[] ints = new int[obj.length];
@@ -12,7 +12,7 @@ public class QuickSorter extends Sorter {
         }
         int[] answer = quickSorting(ints);
         for(int i=0; i < answer.length; i++){
-            System.out.println(answer[i]);
+//            System.out.println(answer[i]);
         }
     }
 
