@@ -11,5 +11,5 @@ public class ProtoTypeMain {
         for(int i=0; i < papers.length; i++){
             papers[i].printName();
         }
-    };
+    }
 }

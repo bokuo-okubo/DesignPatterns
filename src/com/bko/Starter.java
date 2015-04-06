@@ -4,6 +4,7 @@ package com.bko;
 
 import com.bko.behavior_patterns.iterator.IteratorMain;
 import com.bko.behavior_patterns.template_method.TemplateMethodMain;
+import com.bko.generate_patterns.abstract_factory.AbstractFactoryMain;
 import com.bko.generate_patterns.builder.BuilderMain;
 import com.bko.generate_patterns.factory_method.FactoryMethodMain;
 import com.bko.generate_patterns.proto_type.ProtoTypeMain;
@@ -28,6 +29,7 @@ public class Starter {
         map.put("singleton", new Integer(5) );
         map.put("prototype", new Integer(6) );
         map.put("builder", new Integer(7) );
+        map.put("abstract", new Integer(8) );
 
         PROJECT_MAP = Collections.unmodifiableMap(map);
     }
@@ -68,6 +70,10 @@ public class Starter {
             case 7:
                 BuilderMain.main();
                 break;
+            case 8:
+                AbstractFactoryMain.main();
+                break;
+
         }
     }
 }
