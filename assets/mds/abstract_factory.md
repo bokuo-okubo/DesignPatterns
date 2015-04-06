@@ -194,6 +194,13 @@ main メソッドの中では、Factory メソッドの実際の型を知るこ�
 
 
 
+## 8.2 AbstractFactoryパターンまとめ
+
+サンプルケースの SampleClass の main メソッドのように、実際にどの Factory サブクラスが利用されるのかは、明確にはされていない状態で、鍋に利用するオブジェクト群を得ています。
+
+AbstractFactory パターンの一般的なクラス図は以下のようになります。
+
+![class_zu](../img/abstract_factory/abstractFactory3.gif)
 
 
 
