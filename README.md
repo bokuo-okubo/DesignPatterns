@@ -31,7 +31,8 @@
 ####構造に関するパターン
 6. [Adapter](./assets/mds/Adapter.md)
 	- もともと関連性の無い２つのクラスを接続するクラスを作る。
-7. [Bridge]
+7. [Bridge](./assets/mds/bridge.md)
+	- クラスなどの実装と、呼び出し側の間の橋渡しをするクラスを用意し、実装を隠蔽する。
 8. [Composite]
 9. [Decorator]
 10. [Facade]
