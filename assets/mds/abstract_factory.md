@@ -146,7 +146,54 @@ public class MizutakiFactory extends Factory{
 
 ```
 
+
+
 これにあわせて、SampleClassクラスはこんなかんじになる
 ```
-
+import java.util.*;
+ 
+public class SampleClass{
+    public static void main(String args[]){
+        HotPot hotPot = new HotPot(new Pot());
+        Factory factory = new MizutakiFactory();
+        hotPot.addSoup(factory.getSoup());
+        hotPot.addMain(factory.getMain());
+        hotPot.addVegetables(factory.getVegetables());
+        hotPot.addOtherIngredients(factory.getOtherIngredients());
+    }
+}
 ```
+
+水炊きを生成するときには、必ずこのMizutakiFactoryクラスを利用するようにすることによって、プログラマによらずいつも同じ水炊きを生成することができるようになる。
+
+すなわち、プログラマが過ちをおかしにくい構図になる。
+
+![abstract_factory1](../img/abstract_factory/abstractFactory1.gif)
+
+この段階ではまだ AbstractFactory パターンとはなっていませんが、「利用するオブジェクトの整合性を保ちたい」という要求には応えることができます。
+
+MizutakiFactory と同じように、SukiyakiFactory、KimuchiFactoryなどを作成することが考えられますので、これらのクラスの親クラスとして Factory クラスを作成しておきます。Factory クラスは、以下のように、getSoup、getMain、getVegetables、getOtherIngredients の４つの抽象メソッドを定義しています。
+
+factory
+```
+import java.util.*;
+ 
+public abstract class Factory{
+    public abstract Soup getSoup();
+    public abstract Protein getMain();
+    public abstract List getVegetables();
+    public abstract List getOtherIngredients();
+}
+```
+
+main メソッドの中では、Factory メソッドの実際の型を知ることなく処理が進んでいます。すなわち、抽象的な Factory クラスを利用して処理を進めていっているのです。このようにすることで、「利用するオブジェクト群をごそっと入れ替える」という要求に応えることができるようになりました。この状態のクラス図を確認してみます。
+
+![class_zu](../img/abstract_factory/abstractFactory2.gif)
+
+
+
+
+
+
+
+

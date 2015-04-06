@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Main{
     public static void main(String args[]) throws IOException {
-        String execute = "builder";
+        String execute = "abstract";
         Starter.startProject(execute);
     }
 }

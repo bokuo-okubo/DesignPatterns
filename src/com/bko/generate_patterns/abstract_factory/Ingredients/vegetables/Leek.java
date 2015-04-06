@@ -1,4 +1,4 @@
-package com.bko.generate_patterns.abstract_factory.vegetables;
+package com.bko.generate_patterns.abstract_factory.Ingredients.vegetables;
 
 
 /**

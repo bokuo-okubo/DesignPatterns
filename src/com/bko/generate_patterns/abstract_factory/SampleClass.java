@@ -1,7 +1,11 @@
 package com.bko.generate_patterns.abstract_factory;
-import com.bko.generate_patterns.abstract_factory.vegetables.ChineseCabbage;
-import com.bko.generate_patterns.abstract_factory.vegetables.Chrysanthemum;
-import com.bko.generate_patterns.abstract_factory.vegetables.Leek;
+
+import com.bko.generate_patterns.abstract_factory.factories.Factory;
+import com.bko.generate_patterns.abstract_factory.factories.KimuchiFactory;
+import com.bko.generate_patterns.abstract_factory.factories.MizutakiFactory;
+import com.bko.generate_patterns.abstract_factory.factories.SukiakiFactory;
+import com.bko.generate_patterns.abstract_factory.pots.HotPot;
+import com.bko.generate_patterns.abstract_factory.pots.Pot;
 
 import java.util.*;
 
@@ -10,20 +14,30 @@ import java.util.*;
  */
 public class SampleClass {
     public static void main(){
-        HotPot hotPot = new HotPot(new Pot());
-        Factory factory = new MizutakiFactory();
+        Factory mizu_fac = createFactory("mizutaki");
+        HotPot pot = useFactory(mizu_fac);
 
-        hotPot.addSoup(factory.getSoup()); // 鶏がらを煮込んだスープ
-        hotPot.addMain(factory.getMain);        // Main として鶏肉
+    }
 
-        List<Vegetable> vegetables = new ArrayList<Vegetable>();
-        vegetables.add(new ChineseCabbage()); // 白菜
-        vegetables.add(new Leek());           // ねぎ
-        vegetables.add(new Chrysanthemum());  // 春菊
-        hotPot.addVegetables(vegetables);
+    public static HotPot useFactory(Factory factory){
+        HotPot hotPot = new HotPot(new Pot("土鍋"));
 
-        List<Ingredients> otherIngredients = new ArrayList<Ingredients>();
-        otherIngredients.add(new Tofu());     // 豆腐
-        hotPot.addOtherIngredients(otherIngredients);
+        hotPot.addSoup(factory.getSoup());
+        hotPot.addMain(factory.getMain());
+        hotPot.addVegetables(factory.getVegetables());
+        hotPot.addOtherIngredients(factory.getOthorIngeredients());
+
+        hotPot.printPotStatus();
+        return hotPot;
+    }
+
+    private static Factory createFactory(String str){
+        if("キムチ鍋".equals(str)){
+            return new KimuchiFactory();
+        }else if("すき焼き".equals(str)){
+            return new SukiakiFactory();
+        }else{
+            return new MizutakiFactory();
+        }
     }
 }
