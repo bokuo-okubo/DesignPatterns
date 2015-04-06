@@ -14,7 +14,8 @@
 ###目録
 
 ####生成に関するパターン
-1. [AbstractFactory]
+1. [AbstractFactory](./assets/mds/abstract_factory.md)
+	- 関連する一連のインスタンスを状況に応じて適切に生成する方法を提供する。
 
 2. [Builder](./assets/mds/builder.md)
 	- 複合化されたインスタンスの生成過程を隠蔽する。
