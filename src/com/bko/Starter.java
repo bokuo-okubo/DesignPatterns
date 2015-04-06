@@ -10,6 +10,7 @@ import com.bko.generate_patterns.factory_method.FactoryMethodMain;
 import com.bko.generate_patterns.proto_type.ProtoTypeMain;
 import com.bko.generate_patterns.singleton.SingletonMain;
 import com.bko.structure_patterns.adapter.AdapterMain;
+import com.bko.structure_patterns.bridge.BridgeMain;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,6 +31,7 @@ public class Starter {
         map.put("prototype", new Integer(6) );
         map.put("builder", new Integer(7) );
         map.put("abstract", new Integer(8) );
+        map.put("bridge", new Integer(9) );
 
         PROJECT_MAP = Collections.unmodifiableMap(map);
     }
@@ -73,7 +75,9 @@ public class Starter {
             case 8:
                 AbstractFactoryMain.main();
                 break;
-
+            case 9:
+                BridgeMain.main();
+                break;
         }
     }
 }
