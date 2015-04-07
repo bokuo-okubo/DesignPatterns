@@ -143,6 +143,8 @@ ublic class TimerSorter extends Sorter{
 
 ![クラス図](../img/bridge/bridge6.gif)
 
+![クラス図](../img/bridge/bridge7.gif)
+
 
 
 
