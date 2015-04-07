@@ -33,7 +33,9 @@
 	- もともと関連性の無い２つのクラスを接続するクラスを作る。
 7. [Bridge](./assets/mds/bridge.md)
 	- クラスなどの実装と、呼び出し側の間の橋渡しをするクラスを用意し、実装を隠蔽する。
-8. [Composite]
+8. [Composite](./assets/mds/composite.md)
+	- 再帰的な構造を表現する。
+	
 9. [Decorator]
 10. [Facade]
 11. [Flyweight]

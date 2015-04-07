@@ -12,6 +12,7 @@ import com.bko.generate_patterns.proto_type.ProtoTypeMain;
 import com.bko.generate_patterns.singleton.SingletonMain;
 import com.bko.structure_patterns.adapter.AdapterMain;
 import com.bko.structure_patterns.bridge.BridgeMain;
+import com.bko.structure_patterns.composite.CompositeMain;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -34,6 +35,7 @@ public class Starter {
         map.put("abstract", new Integer(8) );
         map.put("bridge", new Integer(9) );
         map.put("strategy", new Integer(10) );
+        map.put("composite", new Integer(11));
 
         PROJECT_MAP = Collections.unmodifiableMap(map);
     }
@@ -82,6 +84,9 @@ public class Starter {
                 break;
             case 10:
                 StrategyMain.main();
+                break;
+            case 11:
+                CompositeMain.main();
                 break;
         }
     }
