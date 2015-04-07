@@ -42,3 +42,108 @@ Strategyパターンは、戦略の部分を意識して別クラスとして作
     }
 }
  ```
+ 
+ 
+ さてここで、２つのHumanインスタンスが与えられた場合に、それらの大小を比較するSampleClassというクラスを考える。
+ 
+```
+public class SampleClass{
+    public int compare(Human h1,Human h2){
+        if(h1.age > h2.age){
+            return 1;
+        }else if(h1.age == h2.age){
+            return 0;
+        }else{
+            return -1;
+        }
+    }
+}　
+```
+
+ここでは、年齢を比較して、第一引数で渡されたHumanインスタンスの年齢の方が大きければ、１を返し、２つのHumanインスタンスの年齢が同じであれば、０を、以下略
+
+しかし、Humanオブジェクトには複数のパラメタがあり、Humanを比較する方法はたくさん考えられる。
+
+比較結果は、どのパラメータをどのように利用するかにより異なってしまう。
+例えば、単純に年齢で比較する場合と、身長で比較する場合では異なる結果になるだろう。
+
+
+そこで、比較するパラメータを指定できるようなプログラムとすることをかんがえる。
+
+```
+public class SampleClass{
+    private int type = -1;
+    public static final int COMPARE_AGE = 1;
+    public static final int COMPARE_HEIGHT = 2;
+    public static final int COMPARE_WEIGHT = 3;
+    public SampleClass(int compareType){
+        this.type = type;
+    }
+    public int compare(Human h1,Human h2){
+        if(type == COMPARE_AGE){
+            if(h1.age > h2.age){
+                return 1;
+            }else if(h1.age == h2.age){
+                return 0;
+            }else{
+                return -1;
+            }
+        }else if(type == COMPARE_HEIGHT){
+            if(h1.height > h2.height){
+                return 1;
+            }else if(h1.height == h2.height ){
+                return 0;
+            }else{
+                return -1;
+            }
+        }
+        ・・・・・
+    }
+}　
+``` 
+
+メソッドの中に溶け込んだ形でif文の分岐を利用してアルゴリズムを変更するようにすると、超煩雑。ていうか循環的複雑度高すぎ。
+
+[サイクロマティック複雑度](http://ja.wikipedia.org/wiki/循環的複雑度)
+
+Strategyパターンでは、状況に応じて、変更する必要のあるアルゴリズムの部分を、意識的に別クラスとして分離することで、アルゴリズムの修正、追加等の見通しが非常に良くなる。
+
+サンプルケースを例にすると、まずは、比較アルゴリズム部分をクラスとして分離する。
+例えば、年齢を比較するための、AgeComparatorクラスを作成する。
+
+```
+public class AgeComparator{
+    public int compare(Human h1 , Human h2){
+        if(h1.age > h2.age){
+            return 1;
+        }else if(h1.age == h2.age){
+            return 0;
+        }else{
+            return -1;
+        }
+    }
+}
+```
+
+比較アルゴリズム部分を分離し、実際の比較処理は、AgeComparatorに委譲できるようにしておく。
+
+```
+public class MyClass{
+    public int compare(Human h1,Human h2){
+        return new AgeComparator().compare(h1,h2);
+    }
+}
+```
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
