@@ -49,7 +49,8 @@
 18. [Memento]
 19. [Observer]
 20. [State]
-21. [Strategy]
+21. [Strategy](./assets/mds/strategy.md)
+	- データ構造に対して適用する一連のアルゴリズムをカプセル化し、アルゴリズムの切り替えを容易にする
 22. [TemplateMethod](./assets/mds/TemplateMethod.md)
 	- あるアルゴリズムの途中経過で必要な処理を抽象メソッドに委ね、その実装を変えることで処理が変えられるようにする。
 23. [Visitor]

@@ -3,6 +3,7 @@ package com.bko;
 
 
 import com.bko.behavior_patterns.iterator.IteratorMain;
+import com.bko.behavior_patterns.strategy.StrategyMain;
 import com.bko.behavior_patterns.template_method.TemplateMethodMain;
 import com.bko.generate_patterns.abstract_factory.AbstractFactoryMain;
 import com.bko.generate_patterns.builder.BuilderMain;
@@ -32,6 +33,7 @@ public class Starter {
         map.put("builder", new Integer(7) );
         map.put("abstract", new Integer(8) );
         map.put("bridge", new Integer(9) );
+        map.put("strategy", new Integer(10) );
 
         PROJECT_MAP = Collections.unmodifiableMap(map);
     }
@@ -77,6 +79,9 @@ public class Starter {
                 break;
             case 9:
                 BridgeMain.main();
+                break;
+            case 10:
+                StrategyMain.main();
                 break;
         }
     }
