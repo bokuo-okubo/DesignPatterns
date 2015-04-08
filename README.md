@@ -36,7 +36,8 @@
 8. [Composite](./assets/mds/composite.md)
 	- 再帰的な構造を表現する。
 	
-9. [Decorator]
+9. [Decorator](./assets/mds/decorator.md)
+	- あるインスタンスに対し、動的に付加機能を追加する。Filterとも呼ばれる。
 10. [Facade]
 11. [Flyweight]
 12. [Proxy]
