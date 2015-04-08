@@ -43,7 +43,8 @@
 12. [Proxy]
 
 ####振る舞いに関するパターン
-13. [Chain of Responsibility]
+13. [Chain of Responsibility](./assets/mds/chain_of_responsibility.md)
+	- イベントの送受信を行う複数のオブジェクトを鎖状につなぎ、それらの間をイベントが渡されていくようにする。
 14. [Command]
 15. [Interpreter]
 16. [Itarator](./assets/mds/Iterator.md) 
@@ -56,5 +57,6 @@
 	- データ構造に対して適用する一連のアルゴリズムをカプセル化し、アルゴリズムの切り替えを容易にする
 22. [TemplateMethod](./assets/mds/TemplateMethod.md)
 	- あるアルゴリズムの途中経過で必要な処理を抽象メソッドに委ね、その実装を変えることで処理が変えられるようにする。
-23. [Visitor]
+23. [Visitor](./assets/mds/visitor.md)
+	- データ構造を保持するクラスと、それに対して処理を行うクラスを分離する。
 
