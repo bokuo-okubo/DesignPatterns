@@ -1,7 +1,5 @@
 package com.bko.structure_patterns.composite;
 
-import com.bko.structure_patterns.composite.test.Test1;
-
 /**
  * Created by bko on 4/7/15.
  */

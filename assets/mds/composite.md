@@ -81,11 +81,150 @@ public class Directory{
 
  上記の２つのファイルを使って、以下のようなファイル構造を記述して、削除してみよう。
 
-![composite2](../img/composite/composite2.gif)
+![composite4](../img/composite/composite4.gif)
 
 
 
 
 ```
+package com.bko.structure_patterns.composite.test;
+
+import com.bko.structure_patterns.composite.Directory;
+import com.bko.structure_patterns.composite.File;
+
+/**
+ * Created by bko on 4/8/15.
+ */
+public class Test1 {
+    public static void main(){
+        File file1 = new File("file1");
+        File file2 = new File("file2");
+        File file3 = new File("file3");
+        File file4 = new File("file4");
+        Directory dir1 = new Directory("dir1");
+        dir1.add(file1);
+        Directory dir2 = new Directory("dir2");
+        dir2.add(file2);
+        dir2.add(file3);
+
+        dir1.add(dir2);
+        dir1.add(file4);
+
+        dir1.remove();
+
+    }
+}
+```
+
+実行結果
 
 ```
+file1を削除しました。
+file2を削除しました。
+file3を削除しました。
+dir2を削除しました
+file4を削除しました。
+dir1を削除しました
+
+Process finished with exit code 0
+
+```
+
+問題なく動作し、　Compositeパターンなんていらないじゃないかと思ってしまう
+
+ところがここで、ディレクトリには、ディレクトリとファイルだけでなくシンボリックリンクも入るようにしたい
+
+という要求が出てきた
+
+Directoryクラスは、add(Symbolic link)なるメソッドなり、いろいろやんなきゃ
+
+個々で公開する。
+なぜCompositeパターンを使わなかったのか！と。。
+
+では、Compositeパターンを利用して上記のファイル構造を記述していくとどうなるか？
+
+COｍぽしてパターンでは、容器の中身と入れ物を同一視する。
+同一視するために、容器の中身と入れ物が共通のインタフェイスを実装するようにする。
+
+
+
+```
+public interface DirectoryEntry{
+	public void remove();
+}
+```
+
+改変版Directory
+
+```
+package com.bko.structure_patterns.composite.directory_entries;
+
+import java.util.*;
+
+/**
+ * Created by bko on 4/8/15.
+ */
+public class Directory implements DirectoryEntry {
+    private List<DirectoryEntry> list;
+    private String name = null;
+
+    public Directory(String name){
+        this.name = name;
+        this.list = new ArrayList<DirectoryEntry>();
+    }
+
+    public void add(DirectoryEntry entry){
+        list.add(entry);
+    }
+
+    public void remove(){
+        Iterator<DirectoryEntry> itr = list.iterator();
+        while (itr.hasNext()){
+            DirectoryEntry entry = itr.next();
+            entry.remove();
+        }
+        System.out.println(name + "を削除しました");
+    }
+
+}
+
+```
+
+改変版File
+
+```
+package com.bko.structure_patterns.composite.directory_entries;
+
+/**
+ * Created by bko on 4/8/15.
+ */
+public class File implements DirectoryEntry {
+    private String name = null;
+    public File(String name){
+        this.name = name;
+    }
+
+    public void remove(){
+        System.out.println(name + "を削除しました。");
+    }
+}
+
+```
+
+このように、Directoryクラス、Fileクラスを共にDirectoryEntryクラスを実装するクラスとすることで、Directoryクラスのremoveメソッド内では、実態がFileクラスのインスタンスであるのか、Directoryクラスのインスタンスであるのかを木にせず、どちらもDirectoryEntryオブジェクトとして扱うことができるよになる。
+
+まさに、容器と中身を同一視している状態！
+
+![composite4](../img/composite/composite2.gif)
+
+
+さて、このようにCompositeパターンを利用していることで、SymbolicLinkクラスを追加する必要が生じた場合も、柔軟に対応できる。
+Direcotryクラスのソースコードを修正する必要ももうない。
+ただ、DirectoryEntryインタフェイスを実装するように、SymbolicLinkクラスを実装すればよい。
+
+
+##11.3 Compositeパターンまとめ
+
+Compositeパターンの一般的なクラス図
+
+![composite3](../img/composite/composite3.gif)
