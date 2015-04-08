@@ -142,3 +142,7 @@ Icecream ice1 = new CashewNutsToppingIcecream(new VanillaIcecream());
 Icecream ice2 = new CashewNutsToppingIcecream(new GreenTeaIcecream());
 Icecream ice3 = new SliceAlmondToppingIcecream(new CashewNutsToppingIcecream(new VanillaIcecream()));
 ```
+
+##12.3 Decoratorパターンまとめ
+
+![decorator3](../img/decorator/decorator3.gif)
