@@ -50,7 +50,8 @@
 15. [Interpreter]
 16. [Itarator](./assets/mds/Iterator.md) 
 	- 複数の要素を内包するオブジェクトの全ての要素に順にアクセスする方法を提供する。
-17. [Mediator]
+17. [Mediator](./assets/mds/mediator.md)
+	- オブジェクト間の相互作用を仲介するオブジェクトを定義し、オブジェクト間の結合度を低くする。
 18. [Memento]
 19. [Observer]
 20. [State]

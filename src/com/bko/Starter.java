@@ -44,6 +44,7 @@ public class Starter {
         map.put("visitor", new Integer(13));
         map.put("responsibility", new Integer(14));
         map.put("facade", new Integer(15) );
+        map.put("mediator", new Integer(16) );
 
         PROJECT_MAP = Collections.unmodifiableMap(map);
     }
@@ -107,6 +108,9 @@ public class Starter {
                 break;
             case 15:
                 FacadeMain.main();
+                break;
+            case 16:
+                MediatorMina.main();
                 break;
         }
     }
