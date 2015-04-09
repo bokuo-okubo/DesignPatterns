@@ -99,19 +99,15 @@ public class Starter {
             case 12:
                 DecoratorMain.main();
                 break;
-<<<<<<< HEAD
             case 13:
                 VisitorMain.main();
                 break;
-
-=======
             case 14:
                 ResponsibilityMain.main();
                 break;
             case 15:
                 FacadeMain.main();
                 break;
->>>>>>> master
         }
     }
 }

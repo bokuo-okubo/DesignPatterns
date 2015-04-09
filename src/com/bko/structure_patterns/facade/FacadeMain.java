@@ -5,6 +5,6 @@ package com.bko.structure_patterns.facade;
  */
 public class FacadeMain {
     public static void main(){
-
+        Visitor.main();
     }
 }

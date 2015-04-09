@@ -21,3 +21,50 @@ Facadeパターンは、既存のクラスを複数組み合わせて使う手�
 
 ##15.2 サンプルケース
 
+山田くんは昆虫図鑑を借りるため、図書室へ行きました。 ところがどこにおいてあるのかわかりません。所蔵本リストと、貸出帳がおいてあるのですが、使い方がわからないようです。この状態をソースにするとこんな感じです。
+
+```
+//所蔵本リスト
+public class BookList {
+    public String searchBook(String bookName) {
+        String location = null;
+        //本の名前から探す
+        //あればその場所を、なければnullを返す
+        return location;
+    }
+}
+```
+
+```
+//貸出帳
+public class LendingList {
+    public boolean check(String bookName) {
+        //貸出帳をチェックする
+        //貸出中ならtrue、そうでなければfalseを返す
+        return true;
+    }
+}
+```
+
+```
+//山田くん
+public class Visitor {
+    public static void main(String[] args) {
+        //昆虫図鑑はどこにあるんだ…？
+        //いつどこでどのメソッドを使えばいいんだ？？
+    }
+}
+```
+
+
+![image](../img/facade/facade1.gif)
+
+この場合、図書委員の中村くんが、facadeパターンの窓口の役割を果たす。
+
+そのおかげで、山田くんは所蔵本リストや貸出超の使い方をしらんくても、中村くんに聞けば、欲しい本がどこにあるかわかる。
+
+
+##まとめ
+一般的なクラス図
+
+![image](../img/facade/facade2.gif)
