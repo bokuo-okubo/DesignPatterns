@@ -38,12 +38,14 @@
 	
 9. [Decorator](./assets/mds/decorator.md)
 	- あるインスタンスに対し、動的に付加機能を追加する。Filterとも呼ばれる。
-10. [Facade]
+10. [Facade](./assets/mds/facade.md)
+	- 複数のサブシステムの窓口となる共通のインターフェイスを提供する
 11. [Flyweight]
 12. [Proxy]
 
 ####振る舞いに関するパターン
-13. [Chain of Responsibility]
+13. [Chain of Responsibility](./assets/mds/chain_of_responsibility.md)
+	- イベントの送受信を行う複数のオブジェクトを鎖状につなぎ、それらの間をイベントが渡されていくようにする。
 14. [Command]
 15. [Interpreter]
 16. [Itarator](./assets/mds/Iterator.md) 

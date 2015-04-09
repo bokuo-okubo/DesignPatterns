@@ -2,6 +2,7 @@ package com.bko;
 
 
 
+import com.bko.behavior_patterns.chain_of_responsibility.ResponsibilityMain;
 import com.bko.behavior_patterns.iterator.IteratorMain;
 import com.bko.behavior_patterns.strategy.StrategyMain;
 import com.bko.behavior_patterns.template_method.TemplateMethodMain;
@@ -15,6 +16,7 @@ import com.bko.structure_patterns.adapter.AdapterMain;
 import com.bko.structure_patterns.bridge.BridgeMain;
 import com.bko.structure_patterns.composite.CompositeMain;
 import com.bko.structure_patterns.decorator.DecoratorMain;
+import com.bko.structure_patterns.facade.FacadeMain;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -40,6 +42,8 @@ public class Starter {
         map.put("composite", new Integer(11));
         map.put("decorator", new Integer(12));
         map.put("visitor", new Integer(13));
+        map.put("responsibility", new Integer(14));
+        map.put("facade", new Integer(15) );
 
         PROJECT_MAP = Collections.unmodifiableMap(map);
     }
@@ -95,10 +99,19 @@ public class Starter {
             case 12:
                 DecoratorMain.main();
                 break;
+<<<<<<< HEAD
             case 13:
                 VisitorMain.main();
                 break;
 
+=======
+            case 14:
+                ResponsibilityMain.main();
+                break;
+            case 15:
+                FacadeMain.main();
+                break;
+>>>>>>> master
         }
     }
 }
