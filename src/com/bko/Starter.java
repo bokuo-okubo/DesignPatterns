@@ -2,6 +2,7 @@ package com.bko;
 
 
 
+import com.bko.behavior_patterns.chain_of_responsibility.ResponsibilityMain;
 import com.bko.behavior_patterns.iterator.IteratorMain;
 import com.bko.behavior_patterns.strategy.StrategyMain;
 import com.bko.behavior_patterns.template_method.TemplateMethodMain;
@@ -38,6 +39,7 @@ public class Starter {
         map.put("strategy", new Integer(10) );
         map.put("composite", new Integer(11));
         map.put("decorator", new Integer(12));
+        map.put("responsibility", new Integer(13));
 
         PROJECT_MAP = Collections.unmodifiableMap(map);
     }
@@ -92,6 +94,9 @@ public class Starter {
                 break;
             case 12:
                 DecoratorMain.main();
+                break;
+            case 13:
+                ResponsibilityMain.main();
                 break;
         }
     }
