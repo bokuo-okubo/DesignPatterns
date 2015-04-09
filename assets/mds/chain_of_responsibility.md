@@ -27,5 +27,9 @@ Chain of Responsibilityパターンは、「責任者」を「鎖状」につな
 [final 修飾子について](http://www.javaroad.jp/java_class12.htm)
 
 
+##まとめ
+一般的なクラス図。
+詳しくは当該実装見てください。さよなら。
 
+![image](../img/chain_of_responsibility/chain3.gif)
 
