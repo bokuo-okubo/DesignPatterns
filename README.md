@@ -38,7 +38,8 @@
 	
 9. [Decorator](./assets/mds/decorator.md)
 	- あるインスタンスに対し、動的に付加機能を追加する。Filterとも呼ばれる。
-10. [Facade]
+10. [Facade](./assets/mds/facade.md)
+	- 複数のサブシステムの窓口となる共通のインターフェイスを提供する
 11. [Flyweight]
 12. [Proxy]
 
