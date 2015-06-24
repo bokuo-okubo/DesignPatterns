@@ -110,7 +110,7 @@ public class Starter {
                 FacadeMain.main();
                 break;
             case 16:
-                MediatorMina.main();
+//                MediatorMain.main();
                 break;
         }
     }

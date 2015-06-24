@@ -23,6 +23,6 @@ public class Saito implements LoveMediator {
     public void consultation(Colleague colleagueInLove, Colleague secretLover) {
         int possibility = 0;
 
-        return possibility;
+        //return possibility;
     }
 }
