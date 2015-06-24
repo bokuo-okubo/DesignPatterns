@@ -1,3 +1,9 @@
+##Requirement
+
+- IntelliJ IDEA
+- JDK7
+
+
 ##目的
 - デザインパターンを学ぶ。
 - ついでにJavaも復習する。
